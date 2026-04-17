@@ -1,9 +1,4 @@
 /ip firewall address-list remove [find list=USA-IP]
-/ip firewall address-list add list=USA-IP address=# Country: United States (US) comment=RIPE
-/ip firewall address-list add list=USA-IP address=# Address family: IPv4 comment=RIPE
-/ip firewall address-list add list=USA-IP address=# Delegation status: Allocated || Assigned comment=RIPE
-/ip firewall address-list add list=USA-IP address=# Export mode: Aggregated comment=RIPE
-/ip firewall address-list add list=USA-IP address=# comment=RIPE
 /ip firewall address-list add list=USA-IP address=1.178.0.0/23 comment=RIPE
 /ip firewall address-list add list=USA-IP address=1.178.4.0/22 comment=RIPE
 /ip firewall address-list add list=USA-IP address=1.178.8.0/21 comment=RIPE

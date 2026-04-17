@@ -1,9 +1,4 @@
 /ip firewall address-list remove [find list=Iran-IP]
-/ip firewall address-list add list=Iran-IP address=# Country: Iran (IR) comment=RIPE
-/ip firewall address-list add list=Iran-IP address=# Address family: IPv4 comment=RIPE
-/ip firewall address-list add list=Iran-IP address=# Delegation status: Allocated || Assigned comment=RIPE
-/ip firewall address-list add list=Iran-IP address=# Export mode: Aggregated comment=RIPE
-/ip firewall address-list add list=Iran-IP address=# comment=RIPE
 /ip firewall address-list add list=Iran-IP address=2.57.3.0/24 comment=RIPE
 /ip firewall address-list add list=Iran-IP address=2.144.0.0/14 comment=RIPE
 /ip firewall address-list add list=Iran-IP address=2.176.0.0/12 comment=RIPE

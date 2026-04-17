@@ -1,9 +1,4 @@
 /ip firewall address-list remove [find list=Turkey-IP]
-/ip firewall address-list add list=Turkey-IP address=# Country: Türkiye (TR) comment=RIPE
-/ip firewall address-list add list=Turkey-IP address=# Address family: IPv4 comment=RIPE
-/ip firewall address-list add list=Turkey-IP address=# Delegation status: Allocated || Assigned comment=RIPE
-/ip firewall address-list add list=Turkey-IP address=# Export mode: Aggregated comment=RIPE
-/ip firewall address-list add list=Turkey-IP address=# comment=RIPE
 /ip firewall address-list add list=Turkey-IP address=2.56.60.0/22 comment=RIPE
 /ip firewall address-list add list=Turkey-IP address=2.56.152.0/22 comment=RIPE
 /ip firewall address-list add list=Turkey-IP address=2.57.188.0/22 comment=RIPE

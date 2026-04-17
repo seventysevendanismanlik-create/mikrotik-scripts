@@ -1,9 +1,4 @@
 /ip firewall address-list remove [find list=Canada-IP]
-/ip firewall address-list add list=Canada-IP address=# Country: Canada (CA) comment=RIPE
-/ip firewall address-list add list=Canada-IP address=# Address family: IPv4 comment=RIPE
-/ip firewall address-list add list=Canada-IP address=# Delegation status: Allocated || Assigned comment=RIPE
-/ip firewall address-list add list=Canada-IP address=# Export mode: Aggregated comment=RIPE
-/ip firewall address-list add list=Canada-IP address=# comment=RIPE
 /ip firewall address-list add list=Canada-IP address=2.59.21.0/24 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=2.59.22.0/24 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=5.23.0.0/19 comment=RIPE

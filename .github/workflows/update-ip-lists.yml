@@ -2,8 +2,8 @@ name: Update IP Lists
 
 on:
   schedule:
-    - cron: '0 23 * * 0'  
-  workflow_dispatch:   
+    - cron: '0 23 * * 0'
+  workflow_dispatch:
 
 jobs:
   update:
@@ -27,14 +27,10 @@ jobs:
             echo "Processing $name..."
             url="https://raw.githubusercontent.com/ipverse/rir-ip/master/country/${country}/ipv4-aggregated.txt"
             
-          
             echo "/ip firewall address-list remove [find list=${name}]" > address-lists/${name}.rsc
             
-            
-            curl -s "$url" | while read line; do
-              if [ ! -z "$line" ]; then
-                echo "/ip firewall address-list add list=${name} address=${line} comment=RIPE" >> address-lists/${name}.rsc
-              fi
+            curl -s "$url" | grep -v "^#" | grep -v "^$" | while read line; do
+              echo "/ip firewall address-list add list=${name} address=${line} comment=RIPE" >> address-lists/${name}.rsc
             done
 
             count=$(grep -c "address-list add" address-lists/${name}.rsc)

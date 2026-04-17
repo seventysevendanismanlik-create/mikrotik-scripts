@@ -1,0 +1,50 @@
+name: Update IP Lists
+
+on:
+  schedule:
+    - cron: '0 23 * * 0'  
+  workflow_dispatch:   
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate IP Lists
+        run: |
+          mkdir -p address-lists
+
+          for country in ir tr ca us; do
+            case $country in
+              ir) name="Iran-IP" ;;
+              tr) name="Turkey-IP" ;;
+              ca) name="Canada-IP" ;;
+              us) name="USA-IP" ;;
+            esac
+
+            echo "Processing $name..."
+            url="https://raw.githubusercontent.com/ipverse/rir-ip/master/country/${country}/ipv4-aggregated.txt"
+            
+          
+            echo "/ip firewall address-list remove [find list=${name}]" > address-lists/${name}.rsc
+            
+            
+            curl -s "$url" | while read line; do
+              if [ ! -z "$line" ]; then
+                echo "/ip firewall address-list add list=${name} address=${line} comment=RIPE" >> address-lists/${name}.rsc
+              fi
+            done
+
+            count=$(grep -c "address-list add" address-lists/${name}.rsc)
+            echo "Done: $name - $count prefixes"
+          done
+
+      - name: Commit and Push
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add address-lists/
+          git diff --staged --quiet || git commit -m "Update IP lists - $(date +'%Y-%m-%d')"
+          git push

@@ -590,7 +590,11 @@
 /ip firewall address-list add list=Turkey-IP address=131.222.128.0/24 comment=RIPE
 /ip firewall address-list add list=Turkey-IP address=131.222.130.0/23 comment=RIPE
 /ip firewall address-list add list=Turkey-IP address=131.222.132.0/24 comment=RIPE
-/ip firewall address-list add list=Turkey-IP address=131.222.198.0/23 comment=RIPE
+/ip firewall address-list add list=Turkey-IP address=131.222.192.0/23 comment=RIPE
+/ip firewall address-list add list=Turkey-IP address=131.222.196.0/22 comment=RIPE
+/ip firewall address-list add list=Turkey-IP address=131.222.208.0/21 comment=RIPE
+/ip firewall address-list add list=Turkey-IP address=131.222.216.0/22 comment=RIPE
+/ip firewall address-list add list=Turkey-IP address=131.222.220.0/23 comment=RIPE
 /ip firewall address-list add list=Turkey-IP address=131.222.224.0/19 comment=RIPE
 /ip firewall address-list add list=Turkey-IP address=134.19.200.0/21 comment=RIPE
 /ip firewall address-list add list=Turkey-IP address=134.255.199.0/24 comment=RIPE

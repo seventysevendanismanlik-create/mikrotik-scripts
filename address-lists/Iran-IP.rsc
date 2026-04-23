@@ -688,8 +688,6 @@
 /ip firewall address-list add list=Iran-IP address=95.128.155.0/24 comment=RIPE
 /ip firewall address-list add list=Iran-IP address=95.128.159.0/24 comment=RIPE
 /ip firewall address-list add list=Iran-IP address=95.128.194.0/24 comment=RIPE
-/ip firewall address-list add list=Iran-IP address=95.128.196.0/23 comment=RIPE
-/ip firewall address-list add list=Iran-IP address=95.128.198.0/24 comment=RIPE
 /ip firewall address-list add list=Iran-IP address=95.130.56.0/21 comment=RIPE
 /ip firewall address-list add list=Iran-IP address=95.130.225.0/24 comment=RIPE
 /ip firewall address-list add list=Iran-IP address=95.130.240.0/21 comment=RIPE

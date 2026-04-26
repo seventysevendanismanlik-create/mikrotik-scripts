@@ -27153,7 +27153,10 @@
 /ip firewall address-list add list=USA-IP address=208.71.208.0/22 comment=RIPE
 /ip firewall address-list add list=USA-IP address=208.71.216.0/21 comment=RIPE
 /ip firewall address-list add list=USA-IP address=208.71.232.0/21 comment=RIPE
-/ip firewall address-list add list=USA-IP address=208.71.240.0/20 comment=RIPE
+/ip firewall address-list add list=USA-IP address=208.71.240.0/21 comment=RIPE
+/ip firewall address-list add list=USA-IP address=208.71.248.0/22 comment=RIPE
+/ip firewall address-list add list=USA-IP address=208.71.252.0/23 comment=RIPE
+/ip firewall address-list add list=USA-IP address=208.71.254.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=208.72.0.0/22 comment=RIPE
 /ip firewall address-list add list=USA-IP address=208.72.8.0/21 comment=RIPE
 /ip firewall address-list add list=USA-IP address=208.72.16.0/20 comment=RIPE

@@ -5654,6 +5654,7 @@
 /ip firewall address-list add list=Canada-IP address=208.71.112.0/21 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=208.71.176.0/22 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=208.71.184.0/22 comment=RIPE
+/ip firewall address-list add list=Canada-IP address=208.71.255.0/24 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=208.72.4.0/22 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=208.72.120.0/21 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=208.72.168.0/21 comment=RIPE

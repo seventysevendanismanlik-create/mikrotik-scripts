@@ -883,6 +883,7 @@
 /ip firewall address-list add list=Iran-IP address=185.41.220.0/22 comment=RIPE
 /ip firewall address-list add list=Iran-IP address=185.42.212.0/22 comment=RIPE
 /ip firewall address-list add list=Iran-IP address=185.42.224.0/22 comment=RIPE
+/ip firewall address-list add list=Iran-IP address=185.43.33.0/24 comment=RIPE
 /ip firewall address-list add list=Iran-IP address=185.44.36.0/22 comment=RIPE
 /ip firewall address-list add list=Iran-IP address=185.44.100.0/22 comment=RIPE
 /ip firewall address-list add list=Iran-IP address=185.44.112.0/22 comment=RIPE

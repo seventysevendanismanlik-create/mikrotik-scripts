@@ -549,7 +549,6 @@
 /ip firewall address-list add list=Iran-IP address=91.217.64.0/23 comment=RIPE
 /ip firewall address-list add list=Iran-IP address=91.217.166.0/24 comment=RIPE
 /ip firewall address-list add list=Iran-IP address=91.217.177.0/24 comment=RIPE
-/ip firewall address-list add list=Iran-IP address=91.217.241.0/24 comment=RIPE
 /ip firewall address-list add list=Iran-IP address=91.220.0.0/24 comment=RIPE
 /ip firewall address-list add list=Iran-IP address=91.220.79.0/24 comment=RIPE
 /ip firewall address-list add list=Iran-IP address=91.220.113.0/24 comment=RIPE

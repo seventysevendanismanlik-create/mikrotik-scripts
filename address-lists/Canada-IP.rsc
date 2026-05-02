@@ -386,6 +386,7 @@
 /ip firewall address-list add list=Canada-IP address=24.245.224.0/20 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=24.246.0.0/18 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=24.246.64.0/19 comment=RIPE
+/ip firewall address-list add list=Canada-IP address=31.207.2.0/23 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=37.143.128.0/22 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=43.243.84.0/22 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=45.2.0.0/16 comment=RIPE

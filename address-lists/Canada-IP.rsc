@@ -44,7 +44,6 @@
 /ip firewall address-list add list=Canada-IP address=23.131.40.0/24 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=23.131.112.0/24 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=23.131.120.0/24 comment=RIPE
-/ip firewall address-list add list=Canada-IP address=23.131.148.0/24 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=23.132.28.0/24 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=23.132.108.0/24 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=23.132.148.0/24 comment=RIPE
@@ -185,6 +184,7 @@
 /ip firewall address-list add list=Canada-IP address=23.156.176.0/24 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=23.156.232.0/24 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=23.157.136.0/24 comment=RIPE
+/ip firewall address-list add list=Canada-IP address=23.158.4.0/24 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=23.158.48.0/24 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=23.158.128.0/24 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=23.159.16.0/24 comment=RIPE

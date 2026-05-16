@@ -1733,6 +1733,7 @@
 /ip firewall address-list add list=USA-IP address=23.158.28.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.158.32.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.158.40.0/24 comment=RIPE
+/ip firewall address-list add list=USA-IP address=23.158.44.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.158.56.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.158.72.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.158.80.0/24 comment=RIPE
@@ -3858,7 +3859,7 @@
 /ip firewall address-list add list=USA-IP address=64.29.32.0/19 comment=RIPE
 /ip firewall address-list add list=USA-IP address=64.29.64.0/18 comment=RIPE
 /ip firewall address-list add list=USA-IP address=64.29.128.0/20 comment=RIPE
-/ip firewall address-list add list=USA-IP address=64.29.160.0/19 comment=RIPE
+/ip firewall address-list add list=USA-IP address=64.29.176.0/20 comment=RIPE
 /ip firewall address-list add list=USA-IP address=64.29.192.0/18 comment=RIPE
 /ip firewall address-list add list=USA-IP address=64.30.0.0/15 comment=RIPE
 /ip firewall address-list add list=USA-IP address=64.32.0.0/19 comment=RIPE
@@ -15451,7 +15452,6 @@
 /ip firewall address-list add list=USA-IP address=185.254.68.0/22 comment=RIPE
 /ip firewall address-list add list=USA-IP address=186.190.208.0/20 comment=RIPE
 /ip firewall address-list add list=USA-IP address=186.240.176.0/20 comment=RIPE
-/ip firewall address-list add list=USA-IP address=186.240.192.0/18 comment=RIPE
 /ip firewall address-list add list=USA-IP address=186.241.32.0/19 comment=RIPE
 /ip firewall address-list add list=USA-IP address=186.241.64.0/18 comment=RIPE
 /ip firewall address-list add list=USA-IP address=186.241.144.0/20 comment=RIPE

@@ -9947,7 +9947,7 @@
 /ip firewall address-list add list=USA-IP address=139.96.0.0/16 comment=RIPE
 /ip firewall address-list add list=USA-IP address=139.100.0.0/18 comment=RIPE
 /ip firewall address-list add list=USA-IP address=139.100.64.0/19 comment=RIPE
-/ip firewall address-list add list=USA-IP address=139.100.98.0/23 comment=RIPE
+/ip firewall address-list add list=USA-IP address=139.100.99.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=139.100.100.0/22 comment=RIPE
 /ip firewall address-list add list=USA-IP address=139.100.104.0/21 comment=RIPE
 /ip firewall address-list add list=USA-IP address=139.100.112.0/20 comment=RIPE

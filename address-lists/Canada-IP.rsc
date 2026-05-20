@@ -3806,7 +3806,6 @@
 /ip firewall address-list add list=Canada-IP address=198.180.255.0/24 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=198.181.32.0/20 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=198.181.56.0/22 comment=RIPE
-/ip firewall address-list add list=Canada-IP address=198.181.120.0/21 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=198.181.199.0/24 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=198.182.180.0/23 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=198.182.214.0/23 comment=RIPE

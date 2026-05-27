@@ -1747,7 +1747,6 @@
 /ip firewall address-list add list=USA-IP address=23.158.108.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.158.112.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.158.120.0/24 comment=RIPE
-/ip firewall address-list add list=USA-IP address=23.158.132.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.158.136.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.158.140.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.158.144.0/24 comment=RIPE

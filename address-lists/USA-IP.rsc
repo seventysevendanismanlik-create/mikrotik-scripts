@@ -15330,7 +15330,7 @@
 /ip firewall address-list add list=USA-IP address=185.188.76.0/22 comment=RIPE
 /ip firewall address-list add list=USA-IP address=185.189.72.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=185.189.108.0/22 comment=RIPE
-/ip firewall address-list add list=USA-IP address=185.190.16.0/23 comment=RIPE
+/ip firewall address-list add list=USA-IP address=185.190.17.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=185.190.18.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=185.190.45.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=185.190.56.0/22 comment=RIPE

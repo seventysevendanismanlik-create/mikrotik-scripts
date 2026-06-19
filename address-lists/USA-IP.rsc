@@ -408,6 +408,7 @@
 /ip firewall address-list add list=USA-IP address=23.131.84.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.131.92.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.131.96.0/24 comment=RIPE
+/ip firewall address-list add list=USA-IP address=23.131.104.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.131.116.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.131.124.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.131.128.0/24 comment=RIPE
@@ -13866,7 +13867,7 @@
 /ip firewall address-list add list=USA-IP address=168.151.64.0/18 comment=RIPE
 /ip firewall address-list add list=USA-IP address=168.151.128.0/18 comment=RIPE
 /ip firewall address-list add list=USA-IP address=168.151.192.0/19 comment=RIPE
-/ip firewall address-list add list=USA-IP address=168.151.224.0/20 comment=RIPE
+/ip firewall address-list add list=USA-IP address=168.151.224.0/21 comment=RIPE
 /ip firewall address-list add list=USA-IP address=168.151.240.0/21 comment=RIPE
 /ip firewall address-list add list=USA-IP address=168.151.248.0/22 comment=RIPE
 /ip firewall address-list add list=USA-IP address=168.151.252.0/23 comment=RIPE
@@ -23613,7 +23614,9 @@
 /ip firewall address-list add list=USA-IP address=199.189.232.0/22 comment=RIPE
 /ip firewall address-list add list=USA-IP address=199.189.240.0/21 comment=RIPE
 /ip firewall address-list add list=USA-IP address=199.190.0.0/17 comment=RIPE
-/ip firewall address-list add list=USA-IP address=199.190.128.0/19 comment=RIPE
+/ip firewall address-list add list=USA-IP address=199.190.128.0/21 comment=RIPE
+/ip firewall address-list add list=USA-IP address=199.190.140.0/22 comment=RIPE
+/ip firewall address-list add list=USA-IP address=199.190.144.0/20 comment=RIPE
 /ip firewall address-list add list=USA-IP address=199.190.160.0/20 comment=RIPE
 /ip firewall address-list add list=USA-IP address=199.190.176.0/21 comment=RIPE
 /ip firewall address-list add list=USA-IP address=199.190.186.0/23 comment=RIPE

@@ -1643,6 +1643,7 @@
 /ip firewall address-list add list=Iran-IP address=195.114.4.0/23 comment=RIPE
 /ip firewall address-list add list=Iran-IP address=195.114.8.0/23 comment=RIPE
 /ip firewall address-list add list=Iran-IP address=195.137.167.0/24 comment=RIPE
+/ip firewall address-list add list=Iran-IP address=195.140.218.0/24 comment=RIPE
 /ip firewall address-list add list=Iran-IP address=195.146.32.0/19 comment=RIPE
 /ip firewall address-list add list=Iran-IP address=195.149.127.0/24 comment=RIPE
 /ip firewall address-list add list=Iran-IP address=195.158.230.0/24 comment=RIPE

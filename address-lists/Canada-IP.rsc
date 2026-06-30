@@ -1315,6 +1315,7 @@
 /ip firewall address-list add list=Canada-IP address=80.86.16.0/20 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=80.231.0.0/16 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=80.251.208.0/20 comment=RIPE
+/ip firewall address-list add list=Canada-IP address=85.8.224.0/24 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=85.91.44.0/22 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=85.131.160.0/19 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=85.187.213.0/24 comment=RIPE

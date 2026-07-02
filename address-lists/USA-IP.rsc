@@ -1827,6 +1827,7 @@
 /ip firewall address-list add list=USA-IP address=23.160.192.0/22 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.160.200.0/23 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.160.208.0/24 comment=RIPE
+/ip firewall address-list add list=USA-IP address=23.160.212.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.160.216.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.160.224.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.160.232.0/24 comment=RIPE
@@ -11643,7 +11644,7 @@
 /ip firewall address-list add list=USA-IP address=154.4.0.0/16 comment=RIPE
 /ip firewall address-list add list=USA-IP address=154.6.0.0/15 comment=RIPE
 /ip firewall address-list add list=USA-IP address=154.9.0.0/16 comment=RIPE
-/ip firewall address-list add list=USA-IP address=154.12.0.0/15 comment=RIPE
+/ip firewall address-list add list=USA-IP address=154.12.0.0/14 comment=RIPE
 /ip firewall address-list add list=USA-IP address=154.17.0.0/16 comment=RIPE
 /ip firewall address-list add list=USA-IP address=154.18.0.0/15 comment=RIPE
 /ip firewall address-list add list=USA-IP address=154.21.0.0/16 comment=RIPE
@@ -24134,11 +24135,7 @@
 /ip firewall address-list add list=USA-IP address=200.240.128.0/18 comment=RIPE
 /ip firewall address-list add list=USA-IP address=200.240.192.0/19 comment=RIPE
 /ip firewall address-list add list=USA-IP address=201.2.224.0/20 comment=RIPE
-/ip firewall address-list add list=USA-IP address=201.3.112.0/20 comment=RIPE
-/ip firewall address-list add list=USA-IP address=201.3.224.0/20 comment=RIPE
-/ip firewall address-list add list=USA-IP address=201.4.64.0/20 comment=RIPE
 /ip firewall address-list add list=USA-IP address=201.4.128.0/17 comment=RIPE
-/ip firewall address-list add list=USA-IP address=201.7.16.0/20 comment=RIPE
 /ip firewall address-list add list=USA-IP address=201.8.0.0/19 comment=RIPE
 /ip firewall address-list add list=USA-IP address=201.8.32.0/20 comment=RIPE
 /ip firewall address-list add list=USA-IP address=201.8.64.0/18 comment=RIPE

@@ -542,6 +542,8 @@
 /ip firewall address-list add list=Turkey-IP address=94.103.32.0/20 comment=RIPE
 /ip firewall address-list add list=Turkey-IP address=94.120.0.0/14 comment=RIPE
 /ip firewall address-list add list=Turkey-IP address=94.124.73.0/24 comment=RIPE
+/ip firewall address-list add list=Turkey-IP address=94.127.20.0/24 comment=RIPE
+/ip firewall address-list add list=Turkey-IP address=94.127.22.0/24 comment=RIPE
 /ip firewall address-list add list=Turkey-IP address=94.138.192.0/19 comment=RIPE
 /ip firewall address-list add list=Turkey-IP address=94.142.131.0/24 comment=RIPE
 /ip firewall address-list add list=Turkey-IP address=94.142.254.0/24 comment=RIPE
@@ -580,6 +582,7 @@
 /ip firewall address-list add list=Turkey-IP address=103.215.238.0/23 comment=RIPE
 /ip firewall address-list add list=Turkey-IP address=104.247.160.0/19 comment=RIPE
 /ip firewall address-list add list=Turkey-IP address=107.150.165.0/24 comment=RIPE
+/ip firewall address-list add list=Turkey-IP address=109.68.216.0/24 comment=RIPE
 /ip firewall address-list add list=Turkey-IP address=109.71.248.0/22 comment=RIPE
 /ip firewall address-list add list=Turkey-IP address=109.74.18.0/24 comment=RIPE
 /ip firewall address-list add list=Turkey-IP address=109.104.104.0/24 comment=RIPE

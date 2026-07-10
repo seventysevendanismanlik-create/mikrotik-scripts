@@ -2513,6 +2513,7 @@
 /ip firewall address-list add list=Canada-IP address=168.245.238.0/23 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=168.245.240.0/20 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=169.128.48.0/22 comment=RIPE
+/ip firewall address-list add list=Canada-IP address=169.128.116.0/23 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=169.128.136.0/22 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=169.128.172.0/22 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=169.128.216.0/22 comment=RIPE

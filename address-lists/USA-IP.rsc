@@ -26415,7 +26415,6 @@
 /ip firewall address-list add list=USA-IP address=206.204.0.0/18 comment=RIPE
 /ip firewall address-list add list=USA-IP address=206.204.64.0/19 comment=RIPE
 /ip firewall address-list add list=USA-IP address=206.204.96.0/21 comment=RIPE
-/ip firewall address-list add list=USA-IP address=206.204.104.0/22 comment=RIPE
 /ip firewall address-list add list=USA-IP address=206.204.108.0/23 comment=RIPE
 /ip firewall address-list add list=USA-IP address=206.204.111.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=206.204.112.0/20 comment=RIPE

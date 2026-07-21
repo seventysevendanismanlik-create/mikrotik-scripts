@@ -7812,9 +7812,7 @@
 /ip firewall address-list add list=USA-IP address=103.89.12.0/22 comment=RIPE
 /ip firewall address-list add list=USA-IP address=103.89.68.0/22 comment=RIPE
 /ip firewall address-list add list=USA-IP address=103.90.160.0/22 comment=RIPE
-/ip firewall address-list add list=USA-IP address=103.91.106.0/23 comment=RIPE
 /ip firewall address-list add list=USA-IP address=103.91.219.0/24 comment=RIPE
-/ip firewall address-list add list=USA-IP address=103.92.210.0/23 comment=RIPE
 /ip firewall address-list add list=USA-IP address=103.95.207.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=103.98.172.0/22 comment=RIPE
 /ip firewall address-list add list=USA-IP address=103.98.212.0/22 comment=RIPE
@@ -8808,7 +8806,6 @@
 /ip firewall address-list add list=USA-IP address=123.200.224.0/21 comment=RIPE
 /ip firewall address-list add list=USA-IP address=123.200.242.0/23 comment=RIPE
 /ip firewall address-list add list=USA-IP address=123.200.244.0/22 comment=RIPE
-/ip firewall address-list add list=USA-IP address=123.253.88.0/22 comment=RIPE
 /ip firewall address-list add list=USA-IP address=123.253.152.0/22 comment=RIPE
 /ip firewall address-list add list=USA-IP address=124.24.192.0/18 comment=RIPE
 /ip firewall address-list add list=USA-IP address=124.25.0.0/18 comment=RIPE

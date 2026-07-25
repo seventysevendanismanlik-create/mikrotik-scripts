@@ -1066,7 +1066,12 @@
 /ip firewall address-list add list=Canada-IP address=69.25.63.0/24 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=69.26.64.0/19 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=69.27.96.0/19 comment=RIPE
-/ip firewall address-list add list=Canada-IP address=69.28.192.0/18 comment=RIPE
+/ip firewall address-list add list=Canada-IP address=69.28.192.0/20 comment=RIPE
+/ip firewall address-list add list=Canada-IP address=69.28.208.0/21 comment=RIPE
+/ip firewall address-list add list=Canada-IP address=69.28.216.0/23 comment=RIPE
+/ip firewall address-list add list=Canada-IP address=69.28.219.0/24 comment=RIPE
+/ip firewall address-list add list=Canada-IP address=69.28.220.0/22 comment=RIPE
+/ip firewall address-list add list=Canada-IP address=69.28.224.0/19 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=69.30.85.0/24 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=69.31.160.0/19 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=69.31.192.0/18 comment=RIPE

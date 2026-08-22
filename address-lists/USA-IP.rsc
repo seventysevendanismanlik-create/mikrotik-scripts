@@ -9164,7 +9164,9 @@
 /ip firewall address-list add list=USA-IP address=130.72.0.0/16 comment=RIPE
 /ip firewall address-list add list=USA-IP address=130.74.0.0/16 comment=RIPE
 /ip firewall address-list add list=USA-IP address=130.76.0.0/15 comment=RIPE
-/ip firewall address-list add list=USA-IP address=130.78.176.0/21 comment=RIPE
+/ip firewall address-list add list=USA-IP address=130.78.176.0/24 comment=RIPE
+/ip firewall address-list add list=USA-IP address=130.78.178.0/23 comment=RIPE
+/ip firewall address-list add list=USA-IP address=130.78.180.0/22 comment=RIPE
 /ip firewall address-list add list=USA-IP address=130.80.0.0/15 comment=RIPE
 /ip firewall address-list add list=USA-IP address=130.85.0.0/16 comment=RIPE
 /ip firewall address-list add list=USA-IP address=130.86.0.0/16 comment=RIPE
@@ -11707,7 +11709,6 @@
 /ip firewall address-list add list=USA-IP address=153.75.192.0/18 comment=RIPE
 /ip firewall address-list add list=USA-IP address=153.76.96.0/19 comment=RIPE
 /ip firewall address-list add list=USA-IP address=153.76.128.0/19 comment=RIPE
-/ip firewall address-list add list=USA-IP address=153.76.224.0/21 comment=RIPE
 /ip firewall address-list add list=USA-IP address=153.76.244.0/22 comment=RIPE
 /ip firewall address-list add list=USA-IP address=153.76.248.0/22 comment=RIPE
 /ip firewall address-list add list=USA-IP address=153.77.0.0/16 comment=RIPE
@@ -22802,7 +22803,7 @@
 /ip firewall address-list add list=USA-IP address=199.48.112.0/20 comment=RIPE
 /ip firewall address-list add list=USA-IP address=199.48.128.0/20 comment=RIPE
 /ip firewall address-list add list=USA-IP address=199.48.144.0/22 comment=RIPE
-/ip firewall address-list add list=USA-IP address=199.48.152.0/21 comment=RIPE
+/ip firewall address-list add list=USA-IP address=199.48.152.0/22 comment=RIPE
 /ip firewall address-list add list=USA-IP address=199.48.160.0/21 comment=RIPE
 /ip firewall address-list add list=USA-IP address=199.48.169.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=199.48.170.0/23 comment=RIPE

@@ -12264,6 +12264,7 @@
 /ip firewall address-list add list=USA-IP address=159.92.0.0/16 comment=RIPE
 /ip firewall address-list add list=USA-IP address=159.94.0.0/16 comment=RIPE
 /ip firewall address-list add list=USA-IP address=159.96.0.0/14 comment=RIPE
+/ip firewall address-list add list=USA-IP address=159.100.192.0/20 comment=RIPE
 /ip firewall address-list add list=USA-IP address=159.102.0.0/16 comment=RIPE
 /ip firewall address-list add list=USA-IP address=159.105.0.0/16 comment=RIPE
 /ip firewall address-list add list=USA-IP address=159.106.0.0/16 comment=RIPE

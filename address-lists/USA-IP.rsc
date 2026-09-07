@@ -1945,7 +1945,9 @@
 /ip firewall address-list add list=USA-IP address=23.163.112.0/23 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.163.120.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.163.128.0/23 comment=RIPE
+/ip firewall address-list add list=USA-IP address=23.163.132.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.163.136.0/24 comment=RIPE
+/ip firewall address-list add list=USA-IP address=23.163.140.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.163.144.0/23 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.163.152.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.163.160.0/24 comment=RIPE

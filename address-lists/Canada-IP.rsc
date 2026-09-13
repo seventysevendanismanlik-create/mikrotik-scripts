@@ -2029,7 +2029,11 @@
 /ip firewall address-list add list=Canada-IP address=142.220.0.0/16 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=142.222.0.0/15 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=142.224.0.0/14 comment=RIPE
-/ip firewall address-list add list=Canada-IP address=142.228.0.0/19 comment=RIPE
+/ip firewall address-list add list=Canada-IP address=142.228.0.0/21 comment=RIPE
+/ip firewall address-list add list=Canada-IP address=142.228.8.0/23 comment=RIPE
+/ip firewall address-list add list=Canada-IP address=142.228.11.0/24 comment=RIPE
+/ip firewall address-list add list=Canada-IP address=142.228.12.0/22 comment=RIPE
+/ip firewall address-list add list=Canada-IP address=142.228.16.0/20 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=142.228.32.0/22 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=142.228.40.0/21 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=142.228.56.0/22 comment=RIPE

@@ -1323,6 +1323,7 @@
 /ip firewall address-list add list=Canada-IP address=77.81.76.0/22 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=77.81.80.0/22 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=78.108.176.0/20 comment=RIPE
+/ip firewall address-list add list=Canada-IP address=80.43.64.0/18 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=80.71.32.0/20 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=80.86.16.0/20 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=80.231.0.0/16 comment=RIPE
@@ -1411,6 +1412,7 @@
 /ip firewall address-list add list=Canada-IP address=103.79.120.0/22 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=103.97.203.0/24 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=103.106.228.0/22 comment=RIPE
+/ip firewall address-list add list=Canada-IP address=103.110.126.0/24 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=103.119.216.0/22 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=103.140.3.0/24 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=103.140.120.0/23 comment=RIPE
@@ -5467,7 +5469,9 @@
 /ip firewall address-list add list=Canada-IP address=206.108.230.0/24 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=206.108.237.0/24 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=206.108.238.0/24 comment=RIPE
-/ip firewall address-list add list=Canada-IP address=206.108.240.0/21 comment=RIPE
+/ip firewall address-list add list=Canada-IP address=206.108.240.0/22 comment=RIPE
+/ip firewall address-list add list=Canada-IP address=206.108.244.0/23 comment=RIPE
+/ip firewall address-list add list=Canada-IP address=206.108.246.0/24 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=206.108.248.0/22 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=206.108.252.0/23 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=206.108.254.0/24 comment=RIPE

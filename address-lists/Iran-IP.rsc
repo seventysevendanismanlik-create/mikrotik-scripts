@@ -1000,6 +1000,7 @@
 /ip firewall address-list add list=Iran-IP address=185.97.116.0/22 comment=RIPE
 /ip firewall address-list add list=Iran-IP address=185.98.112.0/22 comment=RIPE
 /ip firewall address-list add list=Iran-IP address=185.99.212.0/22 comment=RIPE
+/ip firewall address-list add list=Iran-IP address=185.99.246.0/23 comment=RIPE
 /ip firewall address-list add list=Iran-IP address=185.100.44.0/22 comment=RIPE
 /ip firewall address-list add list=Iran-IP address=185.101.39.0/24 comment=RIPE
 /ip firewall address-list add list=Iran-IP address=185.101.228.0/22 comment=RIPE

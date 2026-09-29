@@ -1988,9 +1988,10 @@
 /ip firewall address-list add list=USA-IP address=23.164.160.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.164.164.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.164.180.0/24 comment=RIPE
-/ip firewall address-list add list=USA-IP address=23.164.188.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.164.196.0/24 comment=RIPE
+/ip firewall address-list add list=USA-IP address=23.164.204.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.164.216.0/24 comment=RIPE
+/ip firewall address-list add list=USA-IP address=23.164.220.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.164.224.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.164.232.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.164.240.0/24 comment=RIPE

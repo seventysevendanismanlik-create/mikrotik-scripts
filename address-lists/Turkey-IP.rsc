@@ -1509,6 +1509,7 @@
 /ip firewall address-list add list=Turkey-IP address=203.23.255.0/24 comment=RIPE
 /ip firewall address-list add list=Turkey-IP address=203.202.232.0/23 comment=RIPE
 /ip firewall address-list add list=Turkey-IP address=212.2.192.0/19 comment=RIPE
+/ip firewall address-list add list=Turkey-IP address=212.11.64.0/24 comment=RIPE
 /ip firewall address-list add list=Turkey-IP address=212.12.128.0/19 comment=RIPE
 /ip firewall address-list add list=Turkey-IP address=212.15.0.0/19 comment=RIPE
 /ip firewall address-list add list=Turkey-IP address=212.18.108.0/24 comment=RIPE

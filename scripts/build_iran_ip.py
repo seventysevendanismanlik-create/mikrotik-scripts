@@ -9,6 +9,14 @@ Iran-IP = (IPv4 space registered to IR at the RIRs)
 The registry list alone misses space that Iranian networks announce but that
 is registered under another country code (for example Respina 5.160.0.0/16).
 
+Sources:
+  registry  RIPEstat "country-resource-list" (RIPE NCC, built from the RIR
+            statistics files). If RIPEstat is down or its answer looks wrong,
+            the ipverse copy of the same data is used instead and the run
+            prints a warning. When both answer they are compared, and a large
+            disagreement stops the run.
+  BGP       ipverse as-metadata + as-ip-blocks.
+
 Outputs (in address-lists/):
   Iran-IP.txt  one prefix per line, last line "#END <count>". Routers read
                this with "/tool fetch output=user" and apply only the
@@ -23,16 +31,21 @@ import concurrent.futures
 import csv
 import io
 import ipaddress
+import json
 import pathlib
 import sys
 import time
 import urllib.error
 import urllib.request
 
+RIPESTAT_URL = (
+    "https://stat.ripe.net/data/country-resource-list/data.json"
+    "?resource=ir&v4_format=prefix&sourceapp=mikrotik-scripts"
+)
 RAW = "https://raw.githubusercontent.com/ipverse"
-RIR_URLS = [
-    RAW + "/rir-ip/master/country/ir/ipv4-aggregated.txt",
+RIR_URLS = [  # ipverse renamed rir-ip to country-ip-blocks in January 2026
     RAW + "/country-ip-blocks/master/country/ir/ipv4-aggregated.txt",
+    RAW + "/rir-ip/master/country/ir/ipv4-aggregated.txt",
 ]
 AS_CSV_URLS = [
     RAW + "/as-metadata/master/as.csv",
@@ -55,6 +68,8 @@ MAX_TXT_BYTES = 60_000  # RouterOS "/tool fetch output=user" holds about 64 KB
 MUST_CONTAIN = ["78.38.48.232", "217.218.127.127", "5.160.154.1", "81.30.108.171"]
 MUST_NOT_CONTAIN = ["8.8.8.8", "1.1.1.1", "65.108.48.50", "185.252.40.163"]
 MAX_FAILED_ASN_SHARE = 0.03
+MIN_REGISTRY_ADDRESSES = 9_000_000  # below this a registry answer is not believed
+MAX_REGISTRY_MISMATCH = 0.02  # RIPEstat vs ipverse, share of addresses
 
 
 def fetch(url, tries=4):
@@ -109,6 +124,62 @@ def parse_prefixes(text):
     return nets
 
 
+def size(nets):
+    return sum(n.num_addresses for n in ipaddress.collapse_addresses(nets))
+
+
+def parse_ripestat(text):
+    """IPv4 prefixes from a RIPEstat country-resource-list answer."""
+    entries = json.loads(text)["data"]["resources"]["ipv4"]
+    nets = []
+    for entry in entries:
+        if "-" in entry:  # a range, when the API ignores v4_format=prefix
+            first, last = (ipaddress.ip_address(part.strip()) for part in entry.split("-", 1))
+            nets.extend(parse_prefixes("\n".join(map(str, ipaddress.summarize_address_range(first, last)))))
+        else:
+            nets.extend(parse_prefixes(entry))
+    return nets
+
+
+def warn(message):
+    print(f"::warning::{message}")  # shown as a warning on the GitHub Actions run
+
+
+def registry_prefixes():
+    """Return (prefixes, source name). RIPEstat first, ipverse as the backup."""
+    ripestat = ipverse = None
+    try:
+        ripestat = parse_ripestat(fetch(RIPESTAT_URL) or "")
+        if size(ripestat) < MIN_REGISTRY_ADDRESSES:
+            warn(f"RIPEstat returned only {size(ripestat)} addresses, ignoring it")
+            ripestat = None
+    except Exception as err:  # download, JSON or format problem
+        warn(f"RIPEstat registry download failed: {err}")
+    try:
+        ipverse = parse_prefixes(fetch_first(RIR_URLS))
+        if size(ipverse) < MIN_REGISTRY_ADDRESSES:
+            warn(f"ipverse returned only {size(ipverse)} registry addresses, ignoring it")
+            ipverse = None
+    except Exception as err:
+        warn(f"ipverse registry download failed: {err}")
+
+    if ripestat and ipverse:
+        both = size(ripestat + ipverse)
+        only_ripestat = both - size(ipverse)
+        only_ipverse = both - size(ripestat)
+        print(f"registry: RIPEstat {size(ripestat)} addresses, ipverse {size(ipverse)}; "
+              f"{only_ripestat} only in RIPEstat, {only_ipverse} only in ipverse")
+        if only_ripestat + only_ipverse > size(ripestat) * MAX_REGISTRY_MISMATCH:
+            sys.exit("ERROR: RIPEstat and ipverse disagree about the registry space")
+        return ripestat, "RIPEstat"
+    if ripestat:
+        return ripestat, "RIPEstat"
+    if ipverse:
+        warn("registry space taken from ipverse (backup source)")
+        return ipverse, "ipverse"
+    sys.exit("ERROR: no registry source answered")
+
+
 def read_optional(name):
     path = OUT_DIR / name
     return parse_prefixes(path.read_text()) if path.exists() else []
@@ -135,9 +206,7 @@ def fmt(net):
 
 
 def main():
-    rir = parse_prefixes(fetch_first(RIR_URLS))
-    if not rir:
-        sys.exit("ERROR: registry list is empty")
+    rir, rir_source = registry_prefixes()
 
     as_csv = fetch_first(AS_CSV_URLS)
     if not as_csv:
@@ -198,10 +267,10 @@ def main():
     (OUT_DIR / f"{LIST_NAME}.txt").write_text(txt)
     (OUT_DIR / f"{LIST_NAME}.rsc").write_text("\n".join(rsc) + "\n")
 
-    rir_total = sum(n.num_addresses for n in ipaddress.collapse_addresses(rir))
+    rir_total = size(rir)
     print(
         f"{LIST_NAME}: {len(lines)} prefixes, {total} addresses "
-        f"(registry {rir_total}, +{total - rir_total} from {announcing} announcing ASNs of {len(asns)}, "
+        f"(registry {rir_total} from {rir_source}, +{total - rir_total} from {announcing} announcing ASNs of {len(asns)}, "
         f"{failed} ASN downloads failed, {len(extra)} extra, {len(exclude)} excluded)"
     )
 

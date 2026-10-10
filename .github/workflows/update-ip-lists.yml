@@ -33,12 +33,16 @@ jobs:
             esac
 
             echo "Processing $name..."
-            url="https://raw.githubusercontent.com/ipverse/rir-ip/master/country/${country}/ipv4-aggregated.txt"
+            # ipverse renamed rir-ip to country-ip-blocks (January 2026);
+            # the old name is kept as a fallback.
+            base="https://raw.githubusercontent.com/ipverse"
+            path="master/country/${country}/ipv4-aggregated.txt"
+            body=$(curl -sf --retry 3 "$base/country-ip-blocks/$path" || curl -sf --retry 3 "$base/rir-ip/$path" || true)
 
             tmp=$(mktemp)
             echo "/ip firewall address-list remove [find list=${name}]" > "$tmp"
 
-            curl -sf --retry 3 "$url" | grep -v "^#" | grep -v "^$" | while read line; do
+            printf '%s\n' "$body" | grep -v "^#" | grep -v "^$" | while read line; do
               echo "/ip firewall address-list add list=${name} address=${line} comment=RIPE" >> "$tmp"
             done
 

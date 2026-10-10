@@ -1,12 +1,14 @@
-# Update-Iran-IP v2.3 (2026-10-10)
+# Update-Iran-IP v2.4 (2026-10-10)
 # Reads Iran-IP.txt and applies only the differences (new entries are added
 # before old ones are removed), so the list never has a gap and almost
 # nothing is written to flash. A failed or cut-off download
 # leaves the list untouched. Entries whose comment starts with "keep" are
 # never removed. For a trial run: ":global IranIPDryRun true" first.
+# The list name variable must not be called "list": inside "find" that
+# name means the entry's own list, so every address list would match.
 :global IranIPDryRun
 :local url "https://raw.githubusercontent.com/seventysevendanismanlik-create/mikrotik-scripts/main/address-lists/Iran-IP.txt"
-:local list "Iran-IP"
+:local listName "Iran-IP"
 :local minEntries 1000
 :local r
 :local ok false
@@ -50,18 +52,20 @@
 :local added 0
 :local removed 0
 :local stale ({})
-:foreach i in=[/ip firewall address-list find list=$list] do={
-  :local a [/ip firewall address-list get $i address]
-  :if ([:typeof ($want->$a)] != "num") do={
-    :if ([:pick [/ip firewall address-list get $i comment] 0 4] != "keep") do={
-      :set stale ($stale , $i)
-      :set removed ($removed + 1)
-    }
-  } else={ :set ($want->$a) 0 }
+:foreach i in=[/ip firewall address-list find list=$listName] do={
+  :if ([/ip firewall address-list get $i list] = $listName) do={
+    :local a [/ip firewall address-list get $i address]
+    :if ([:typeof ($want->$a)] != "num") do={
+      :if ([:pick [/ip firewall address-list get $i comment] 0 4] != "keep") do={
+        :set stale ($stale , $i)
+        :set removed ($removed + 1)
+      }
+    } else={ :set ($want->$a) 0 }
+  }
 }
 :foreach a,v in=$want do={
   :if ($v = 1) do={
-    :if ($IranIPDryRun != true) do={ /ip firewall address-list add list=$list address=$a comment="auto" }
+    :if ($IranIPDryRun != true) do={ /ip firewall address-list add list=$listName address=$a comment="auto" }
     :set added ($added + 1)
   }
 }

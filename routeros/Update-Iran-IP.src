@@ -1,4 +1,4 @@
-# Update-Iran-IP v2 (2026-10-10)
+# Update-Iran-IP v2.1 (2026-10-10)
 # Reads Iran-IP.txt and applies only the differences, so the list is never
 # empty and almost nothing is written to flash. A failed or cut-off download
 # leaves the list untouched. Entries whose comment starts with "keep" are
@@ -8,10 +8,17 @@
 :local list "Iran-IP"
 :local minEntries 1000
 :local r
-:do {
-  :set r [/tool fetch url=$url output=user as-value]
-} on-error={
-  :log error "Iran-IP Update: download failed, list unchanged"
+:local ok false
+:local try 0
+:while ((!$ok) && ($try < 6)) do={
+  :set try ($try + 1)
+  :do {
+    :set r [/tool fetch url=$url output=user as-value]
+    :set ok true
+  } on-error={ :delay 15s }
+}
+:if (!$ok) do={
+  :log error "Iran-IP Update: download failed 6 times, list unchanged"
   :error "Iran-IP Update: download failed"
 }
 :local d ($r->"data")
@@ -58,4 +65,4 @@
 }
 :local mode ""
 :if ($IranIPDryRun = true) do={ :set mode "DRY RUN " }
-:log info ("Iran-IP Update: " . $mode . "+" . $added . " -" . $removed . ", " . $n . " prefixes in file")
+:log info ("Iran-IP Update: " . $mode . "+" . $added . " -" . $removed . ", " . $n . " prefixes in file, try " . $try)

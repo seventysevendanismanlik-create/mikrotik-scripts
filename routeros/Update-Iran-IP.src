@@ -1,4 +1,4 @@
-# Update-Iran-IP v2.1 (2026-10-10)
+# Update-Iran-IP v2.2 (2026-10-10)
 # Reads Iran-IP.txt and applies only the differences, so the list is never
 # empty and almost nothing is written to flash. A failed or cut-off download
 # leaves the list untouched. Entries whose comment starts with "keep" are
@@ -22,7 +22,7 @@
   :error "Iran-IP Update: download failed"
 }
 :local d ($r->"data")
-:if ([:typeof [:find $d "#END"]] = "nil") do={
+:if ([:typeof [:find $d "#END"]] != "num") do={
   :log error "Iran-IP Update: file incomplete, list unchanged"
   :error "Iran-IP Update: file incomplete"
 }
@@ -32,7 +32,7 @@
 :local len [:len $d]
 :while ($pos < $len) do={
   :local e [:find $d "\n" ($pos - 1)]
-  :if ([:typeof $e] = "nil") do={ :set e $len }
+  :if ([:typeof $e] != "num") do={ :set e $len }
   :local line [:pick $d $pos $e]
   :set pos ($e + 1)
   :if ([:len $line] > 0) do={
@@ -50,7 +50,7 @@
 :local removed 0
 :foreach i in=[/ip firewall address-list find list=$list] do={
   :local a [/ip firewall address-list get $i address]
-  :if ([:typeof ($want->$a)] = "nil") do={
+  :if ([:typeof ($want->$a)] != "num") do={
     :if ([:pick [/ip firewall address-list get $i comment] 0 4] != "keep") do={
       :if ($IranIPDryRun != true) do={ /ip firewall address-list remove $i }
       :set removed ($removed + 1)

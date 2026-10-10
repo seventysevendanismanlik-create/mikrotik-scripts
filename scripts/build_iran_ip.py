@@ -145,6 +145,10 @@ def warn(message):
     print(f"::warning::{message}")  # shown as a warning on the GitHub Actions run
 
 
+def note(message):
+    print(f"::notice::{message}")  # shown on the run page without opening the log
+
+
 def registry_prefixes():
     """Return (prefixes, source name). RIPEstat first, ipverse as the backup."""
     ripestat = ipverse = None
@@ -167,8 +171,8 @@ def registry_prefixes():
         both = size(ripestat + ipverse)
         only_ripestat = both - size(ipverse)
         only_ipverse = both - size(ripestat)
-        print(f"registry: RIPEstat {size(ripestat)} addresses, ipverse {size(ipverse)}; "
-              f"{only_ripestat} only in RIPEstat, {only_ipverse} only in ipverse")
+        note(f"registry: RIPEstat {size(ripestat)} addresses, ipverse {size(ipverse)}; "
+             f"{only_ripestat} only in RIPEstat, {only_ipverse} only in ipverse")
         if only_ripestat + only_ipverse > size(ripestat) * MAX_REGISTRY_MISMATCH:
             sys.exit("ERROR: RIPEstat and ipverse disagree about the registry space")
         return ripestat, "RIPEstat"
@@ -268,7 +272,7 @@ def main():
     (OUT_DIR / f"{LIST_NAME}.rsc").write_text("\n".join(rsc) + "\n")
 
     rir_total = size(rir)
-    print(
+    note(
         f"{LIST_NAME}: {len(lines)} prefixes, {total} addresses "
         f"(registry {rir_total} from {rir_source}, +{total - rir_total} from {announcing} announcing ASNs of {len(asns)}, "
         f"{failed} ASN downloads failed, {len(extra)} extra, {len(exclude)} excluded)"

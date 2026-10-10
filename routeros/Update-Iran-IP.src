@@ -1,6 +1,7 @@
-# Update-Iran-IP v2.2 (2026-10-10)
-# Reads Iran-IP.txt and applies only the differences, so the list is never
-# empty and almost nothing is written to flash. A failed or cut-off download
+# Update-Iran-IP v2.3 (2026-10-10)
+# Reads Iran-IP.txt and applies only the differences (new entries are added
+# before old ones are removed), so the list never has a gap and almost
+# nothing is written to flash. A failed or cut-off download
 # leaves the list untouched. Entries whose comment starts with "keep" are
 # never removed. For a trial run: ":global IranIPDryRun true" first.
 :global IranIPDryRun
@@ -48,11 +49,12 @@
 }
 :local added 0
 :local removed 0
+:local stale ({})
 :foreach i in=[/ip firewall address-list find list=$list] do={
   :local a [/ip firewall address-list get $i address]
   :if ([:typeof ($want->$a)] != "num") do={
     :if ([:pick [/ip firewall address-list get $i comment] 0 4] != "keep") do={
-      :if ($IranIPDryRun != true) do={ /ip firewall address-list remove $i }
+      :set stale ($stale , $i)
       :set removed ($removed + 1)
     }
   } else={ :set ($want->$a) 0 }
@@ -62,6 +64,9 @@
     :if ($IranIPDryRun != true) do={ /ip firewall address-list add list=$list address=$a comment="auto" }
     :set added ($added + 1)
   }
+}
+:if ($IranIPDryRun != true) do={
+  :foreach i in=$stale do={ /ip firewall address-list remove $i }
 }
 :local mode ""
 :if ($IranIPDryRun = true) do={ :set mode "DRY RUN " }

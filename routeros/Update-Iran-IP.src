@@ -1,0 +1,61 @@
+# Update-Iran-IP v2 (2026-10-10)
+# Reads Iran-IP.txt and applies only the differences, so the list is never
+# empty and almost nothing is written to flash. A failed or cut-off download
+# leaves the list untouched. Entries whose comment starts with "keep" are
+# never removed. For a trial run: ":global IranIPDryRun true" first.
+:global IranIPDryRun
+:local url "https://raw.githubusercontent.com/seventysevendanismanlik-create/mikrotik-scripts/main/address-lists/Iran-IP.txt"
+:local list "Iran-IP"
+:local minEntries 1000
+:local r
+:do {
+  :set r [/tool fetch url=$url output=user as-value]
+} on-error={
+  :log error "Iran-IP Update: download failed, list unchanged"
+  :error "Iran-IP Update: download failed"
+}
+:local d ($r->"data")
+:if ([:typeof [:find $d "#END"]] = "nil") do={
+  :log error "Iran-IP Update: file incomplete, list unchanged"
+  :error "Iran-IP Update: file incomplete"
+}
+:local want ({})
+:local n 0
+:local pos 0
+:local len [:len $d]
+:while ($pos < $len) do={
+  :local e [:find $d "\n" ($pos - 1)]
+  :if ([:typeof $e] = "nil") do={ :set e $len }
+  :local line [:pick $d $pos $e]
+  :set pos ($e + 1)
+  :if ([:len $line] > 0) do={
+    :if ([:pick $line ([:len $line] - 1)] = "\r") do={ :set line [:pick $line 0 ([:len $line] - 1)] }
+  }
+  :if ([:len $line] > 6) do={
+    :if ([:pick $line 0 1] != "#") do={ :set ($want->$line) 1; :set n ($n + 1) }
+  }
+}
+:if ($n < $minEntries) do={
+  :log error ("Iran-IP Update: only " . $n . " prefixes in file, list unchanged")
+  :error "Iran-IP Update: too few prefixes"
+}
+:local added 0
+:local removed 0
+:foreach i in=[/ip firewall address-list find list=$list] do={
+  :local a [/ip firewall address-list get $i address]
+  :if ([:typeof ($want->$a)] = "nil") do={
+    :if ([:pick [/ip firewall address-list get $i comment] 0 4] != "keep") do={
+      :if ($IranIPDryRun != true) do={ /ip firewall address-list remove $i }
+      :set removed ($removed + 1)
+    }
+  } else={ :set ($want->$a) 0 }
+}
+:foreach a,v in=$want do={
+  :if ($v = 1) do={
+    :if ($IranIPDryRun != true) do={ /ip firewall address-list add list=$list address=$a comment="auto" }
+    :set added ($added + 1)
+  }
+}
+:local mode ""
+:if ($IranIPDryRun = true) do={ :set mode "DRY RUN " }
+:log info ("Iran-IP Update: " . $mode . "+" . $added . " -" . $removed . ", " . $n . " prefixes in file")

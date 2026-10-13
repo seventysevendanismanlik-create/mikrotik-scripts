@@ -1997,7 +1997,6 @@
 /ip firewall address-list add list=USA-IP address=23.165.24.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.165.28.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.165.32.0/24 comment=RIPE
-/ip firewall address-list add list=USA-IP address=23.165.36.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.165.40.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.165.44.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.165.48.0/24 comment=RIPE
@@ -2015,7 +2014,10 @@
 /ip firewall address-list add list=USA-IP address=23.165.160.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.165.176.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.165.184.0/24 comment=RIPE
+/ip firewall address-list add list=USA-IP address=23.165.188.0/24 comment=RIPE
+/ip firewall address-list add list=USA-IP address=23.165.196.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.165.200.0/24 comment=RIPE
+/ip firewall address-list add list=USA-IP address=23.165.204.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.165.208.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.165.216.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=23.165.224.0/22 comment=RIPE

@@ -4232,7 +4232,11 @@
 /ip firewall address-list add list=Canada-IP address=199.84.16.0/20 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=199.84.32.0/19 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=199.84.64.0/19 comment=RIPE
-/ip firewall address-list add list=Canada-IP address=199.84.128.0/18 comment=RIPE
+/ip firewall address-list add list=Canada-IP address=199.84.128.0/21 comment=RIPE
+/ip firewall address-list add list=Canada-IP address=199.84.138.0/23 comment=RIPE
+/ip firewall address-list add list=Canada-IP address=199.84.140.0/22 comment=RIPE
+/ip firewall address-list add list=Canada-IP address=199.84.144.0/20 comment=RIPE
+/ip firewall address-list add list=Canada-IP address=199.84.160.0/19 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=199.84.192.0/20 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=199.84.208.0/22 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=199.84.216.0/21 comment=RIPE

@@ -201,6 +201,7 @@
 /ip firewall address-list add list=Canada-IP address=23.160.152.0/24 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=23.160.176.0/24 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=23.160.196.0/24 comment=RIPE
+/ip firewall address-list add list=Canada-IP address=23.160.240.0/24 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=23.161.64.0/24 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=23.161.248.0/24 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=23.162.60.0/24 comment=RIPE
@@ -1735,7 +1736,9 @@
 /ip firewall address-list add list=Canada-IP address=131.143.96.0/22 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=131.143.111.0/24 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=131.143.189.0/24 comment=RIPE
-/ip firewall address-list add list=Canada-IP address=131.162.0.0/18 comment=RIPE
+/ip firewall address-list add list=Canada-IP address=131.162.8.0/21 comment=RIPE
+/ip firewall address-list add list=Canada-IP address=131.162.16.0/20 comment=RIPE
+/ip firewall address-list add list=Canada-IP address=131.162.32.0/19 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=131.162.64.0/20 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=131.162.80.0/21 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=131.162.112.0/20 comment=RIPE
@@ -6267,6 +6270,7 @@
 /ip firewall address-list add list=Canada-IP address=216.118.128.0/19 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=216.118.208.0/20 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=216.119.192.0/21 comment=RIPE
+/ip firewall address-list add list=Canada-IP address=216.120.131.0/24 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=216.120.162.0/23 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=216.120.170.0/23 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=216.120.176.0/23 comment=RIPE

@@ -10278,9 +10278,9 @@
 /ip firewall address-list add list=USA-IP address=140.178.0.0/16 comment=RIPE
 /ip firewall address-list add list=USA-IP address=140.180.0.0/16 comment=RIPE
 /ip firewall address-list add list=USA-IP address=140.182.0.0/15 comment=RIPE
-/ip firewall address-list add list=USA-IP address=140.184.16.0/21 comment=RIPE
-/ip firewall address-list add list=USA-IP address=140.184.24.0/22 comment=RIPE
-/ip firewall address-list add list=USA-IP address=140.184.64.0/19 comment=RIPE
+/ip firewall address-list add list=USA-IP address=140.184.8.0/21 comment=RIPE
+/ip firewall address-list add list=USA-IP address=140.184.16.0/20 comment=RIPE
+/ip firewall address-list add list=USA-IP address=140.184.64.0/18 comment=RIPE
 /ip firewall address-list add list=USA-IP address=140.184.128.0/17 comment=RIPE
 /ip firewall address-list add list=USA-IP address=140.185.0.0/16 comment=RIPE
 /ip firewall address-list add list=USA-IP address=140.186.0.0/15 comment=RIPE

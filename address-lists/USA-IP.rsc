@@ -10348,7 +10348,6 @@
 /ip firewall address-list add list=USA-IP address=140.235.192.0/20 comment=RIPE
 /ip firewall address-list add list=USA-IP address=140.235.208.0/22 comment=RIPE
 /ip firewall address-list add list=USA-IP address=140.235.214.0/23 comment=RIPE
-/ip firewall address-list add list=USA-IP address=140.235.216.0/22 comment=RIPE
 /ip firewall address-list add list=USA-IP address=140.235.224.0/19 comment=RIPE
 /ip firewall address-list add list=USA-IP address=140.236.0.0/16 comment=RIPE
 /ip firewall address-list add list=USA-IP address=140.238.0.0/15 comment=RIPE

@@ -6121,6 +6121,7 @@
 /ip firewall address-list add list=Canada-IP address=209.235.128.0/19 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=209.239.0.0/19 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=209.240.112.0/20 comment=RIPE
+/ip firewall address-list add list=Canada-IP address=209.250.8.0/21 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=209.250.128.0/18 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=209.251.24.0/22 comment=RIPE
 /ip firewall address-list add list=Canada-IP address=209.251.246.0/23 comment=RIPE

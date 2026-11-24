@@ -20188,7 +20188,6 @@
 /ip firewall address-list add list=USA-IP address=193.28.148.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=193.28.157.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=193.28.179.0/24 comment=RIPE
-/ip firewall address-list add list=USA-IP address=193.28.190.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=193.29.42.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=193.29.177.0/24 comment=RIPE
 /ip firewall address-list add list=USA-IP address=193.29.189.0/24 comment=RIPE

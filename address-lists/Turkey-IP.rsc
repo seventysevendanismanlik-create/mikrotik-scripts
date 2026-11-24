@@ -450,6 +450,7 @@
 /ip firewall address-list add list=Turkey-IP address=91.220.50.0/24 comment=RIPE
 /ip firewall address-list add list=Turkey-IP address=91.220.65.0/24 comment=RIPE
 /ip firewall address-list add list=Turkey-IP address=91.220.182.0/24 comment=RIPE
+/ip firewall address-list add list=Turkey-IP address=91.220.193.0/24 comment=RIPE
 /ip firewall address-list add list=Turkey-IP address=91.220.242.0/24 comment=RIPE
 /ip firewall address-list add list=Turkey-IP address=91.223.0.0/24 comment=RIPE
 /ip firewall address-list add list=Turkey-IP address=91.223.8.0/24 comment=RIPE
